@@ -10,5 +10,6 @@ Comes with 2 convars, one for your server key and one for your server ID.
 
 tracky_key
   - for your tracky servers key, found in the edit tab of your server
+ 
 tracky_id
   - same but for ID.
