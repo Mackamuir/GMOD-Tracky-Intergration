@@ -8,7 +8,7 @@ if SERVER then
 	util.AddNetworkString( "fuckoff" );
 	util.AddNetworkString( "vote" );
 
-	CreateConVar("tracky_key", "d34a0aa6fe61458d13eda9afde9c25a2");
+	CreateConVar("tracky_key", "");
 
 	hook.Add( "PlayerSay", "CommandIndent", function( ply, text )
 
@@ -49,7 +49,7 @@ if SERVER then
 end
 
 if CLIENT then
-	CreateConVar("tracky_id", "556920", FCVAR_PROTECTED);
+	CreateConVar("tracky_id", "", FCVAR_PROTECTED);
 
 	net.Receive("claim",function(len)
 	chat.AddText( Color( 50, 237, 225 ), "[Tracky] ", Color( 255, 255, 255 ), "You haven't voted! Type /vote to get the voting link!")
