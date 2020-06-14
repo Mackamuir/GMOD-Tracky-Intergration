@@ -22,7 +22,8 @@ if SERVER then
 				http.Fetch( url,
 					function( body )
 					claim = body
-					--this is a fucked way to do this but its easy and works
+					--the API will return 0 if player has not voted, 1 if voted but not claimed or 2 if voted and claimed
+					--https://www.trackyserver.com/listing/api
 					if claim == "0" then
 						net.Start("claim")
 						net.Send(ply)
@@ -41,7 +42,6 @@ if SERVER then
 				end
 			)
 		elseif string.lower(text) == "/vote" then
-			print(vote)
 			net.Start("vote")
 			net.Send(ply)
 		end
