@@ -31,6 +31,7 @@ if SERVER then
 					if claim == "1" then
 						net.Start("claimed")
 						net.Send(ply)
+						--put reward here
 					end
 					if claim == "2" then
 						net.Start("fuckoff")
